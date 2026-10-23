@@ -36,12 +36,14 @@ public class EnemySpawner : MonoBehaviour
         if (spawned.Count >= maxAlive) return;
 
         // El dron tiene que nacer sobre el NavMesh: busca el punto caminable más cercano
-        Vector3 position = transform.position;
         NavMeshHit hit;
-        if (NavMesh.SamplePosition(position, out hit, 3f, NavMesh.AllAreas))
-            position = hit.position;
+        if (!NavMesh.SamplePosition(transform.position, out hit, 10f, NavMesh.AllAreas))
+        {
+            Debug.LogWarning("EnemySpawner: no hay NavMesh a menos de 10 unidades. Mover el spawner a una zona celeste.");
+            return;
+        }
 
-        GameObject enemy = Instantiate(enemyPrefab, position, transform.rotation);
+        GameObject enemy = Instantiate(enemyPrefab, hit.position, transform.rotation);
         spawned.Add(enemy);
     }
 }
