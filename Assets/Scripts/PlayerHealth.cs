@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 // Salud del jugador. No decide qué pasa al morir: avisa con eventos
-// y el GameManager reacciona (así el jugador no se carga de lógica de juego).
+// y el GameManager reacciona y lo informa por consola (así el jugador no se carga de lógica de juego).
 public class PlayerHealth : MonoBehaviour
 {
     private int maxHealth;
@@ -32,12 +32,10 @@ public class PlayerHealth : MonoBehaviour
         lastHitTime = Time.time;
 
         currentHealth = Mathf.Max(0, currentHealth - amount);
-        Debug.Log("Vida: " + currentHealth + "/" + maxHealth);
         OnHealthChanged?.Invoke(currentHealth);
 
         if (currentHealth == 0)
         {
-            Debug.Log("El jugador fue derrotado");
             OnDied?.Invoke();
         }
     }
