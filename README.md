@@ -98,7 +98,7 @@ Punto del mapa que instancia drones centinela cada 10 segundos, con un máximo d
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/LilEsme87/TP2_PVJ1.git
+   git clone https://github.com/LilEsme87/TP2_Prg1
    ```
 2. En **Unity Hub**: *Add > Add project from disk* y seleccionar la carpeta clonada.
 3. Abrir el proyecto con **Unity 2022.3.31f1**.
