@@ -87,7 +87,7 @@ Punto del mapa que instancia drones centinela cada 10 segundos, con un máximo d
 ![PowerUp de Invisibilidad en funcionamiento](/Screenshots/PowerUp2.png)
 
 ### Victoria
-![Pantalla de victoria](/Screenshots/victoria.png)
+![Pantalla de victoria](/Screenshots/Victoria.png)
 
 ### Derrota
 ![Pantalla de Derrota](/Screenshots/Derrota.png)
